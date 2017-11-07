@@ -8,8 +8,8 @@ var __API_URL__ = 'https://git.heroku.com/kc-ng-booklist.git';
     module.errorView.initErrorPage(err);
   }
 
-  function Book(taskObject) {
-    Object.keys(taskObject).forEach(key => this[key] = taskObject[key]);
+  function Book(bookObject) {
+    Object.keys(bookObject).forEach(key => this[key] = bookObject[key]);
   }
 
   Book.prototype.toHtml = function() {
