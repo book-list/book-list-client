@@ -1,7 +1,7 @@
 'use strict';
 
 var app = app || {};
-var __API_URL__ = 'https://git.heroku.com/kc-ng-booklist.git';
+var __API_URL__ = 'https://kc-ng-booklist.herokuapp.com/';
 
 (function(module) {
   function errorCallback(err) {
@@ -24,7 +24,7 @@ var __API_URL__ = 'https://git.heroku.com/kc-ng-booklist.git';
   }
 
   Book.fetchAll = callback =>
-    $.get(`${__API_URL__}/books`)
+    $.get(`${__API_URL__}books`)
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
