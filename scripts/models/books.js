@@ -13,7 +13,7 @@ var __API_URL__ = 'https://git.heroku.com/kc-ng-booklist.git';
   }
 
   Book.prototype.toHtml = function() {
-    let template = Handlebars.compile($('#task-template').text());
+    let template = Handlebars.compile($('#book-template').text());
     return template(this);
   }
 
