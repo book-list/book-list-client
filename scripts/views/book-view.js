@@ -23,13 +23,14 @@ var app = app || {};
       e.preventDefault();
 
       let book = new app.Book({
-        author: $('#author').val(),
-        title: $('#title').val(),
-        isbn: $('#isbn').val(),
-        image_url: $('#image_url').val(),
-        description: $('#description').val()
+        author: event.target.author.value,
+        title: event.target.title.value,
+        isbn: event.target.isbn.value,
+        image_url: event.target.isbn.value,
+        description: event.target.description.value
       })
-      book.insertBook(book);
+      console.log('book', book);
+      module.book.insertBook(book);
       window.location = '../';
     })
   }

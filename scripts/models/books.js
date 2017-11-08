@@ -30,7 +30,7 @@ var __API_URL__ = 'https://kc-ng-booklist.herokuapp.com/';
       .catch(errorCallback);
 
   Book.createBook = book =>
-    $.post(`${__API_URL__}/books`, book)
+    $.post(`${__API_URL__}/books/add`, book)
       .then(() => page('/'))
       .catch(errorCallback);
 
