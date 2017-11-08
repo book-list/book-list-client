@@ -12,20 +12,20 @@ var __API_URL__ = 'https://kc-ng-booklist.herokuapp.com/';
     Object.keys(bookObject).forEach(key => this[key] = bookObject[key]);
   }
 
-  app.Book.prototype.toHtml = function() {
+  Book.prototype.toHtml = function() {
     let template = Handlebars.compile($('#book-list-template').text());
     return template(this);
   }
 
-  app.Book.all = [];
+  Book.all = [];
 
-  app.Book.loadAll = rows => {
-    app.Book.all = rows.map(book => new app.Book(book));
+  Book.loadAll = rows => {
+    Book.all = rows.map(book => new app.Book(book));
   }
 
-  app.Book.fetchAll = callback =>
+  Book.fetchAll = callback =>
     $.get(`${__API_URL__}api/v1/books`)
-      .then(app.Book.loadAll)
+      .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
 
