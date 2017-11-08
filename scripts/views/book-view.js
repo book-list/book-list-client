@@ -30,7 +30,7 @@ var app = app || {};
         description: event.target.description.value
       })
       console.log('book', book);
-      module.book.insertBook(book);
+      module.book.createBook(book);
       window.location = '../';
     })
   }
