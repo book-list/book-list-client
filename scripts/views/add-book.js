@@ -14,7 +14,7 @@ var app = app || {};
       image_url: $('#image_url').val(),
       description: $('#description').val(),
     })
-    book.insertBook();
+    book.insertBook(book);
     window.location = '../';
   }
 

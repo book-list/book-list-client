@@ -13,7 +13,7 @@ var __API_URL__ = 'https://kc-ng-booklist.herokuapp.com/';
   }
 
   Book.prototype.toHtml = function() {
-    let template = Handlebars.compile($('#book-list-template').text());
+    let template = Handlebars.compile($('#book-template').text());
     return template(this);
   }
 
