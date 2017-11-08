@@ -5,20 +5,15 @@ var app = app || {};
 (function(module) {
   const bookView = {};
 
-  function reset() {
-    $('.container').hide();
-  }
-
-
   bookView.initIndexPage = function() {
-    reset();
+    $('.container').hide();
     $('.book-view').show();
     app.Book.all.map(book => $('#book-template').append(book.toHtml()));
   }
 
   // This function is triggered when a form is submitted to add a new book. It creates a new Book object with the values from the form, and passes that object to the createBook method in books.js.
   bookView.initAddForm = function() {
-    reset();
+    $('.container').hide();
     $('.book-form').show();
     $('#new-form').on('submit', function(e) {
       e.preventDefault();
