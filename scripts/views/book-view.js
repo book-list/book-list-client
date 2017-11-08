@@ -5,19 +5,19 @@ var app = app || {};
 (function(module) {
   const bookView = {};
 
-  // function reset() {
-  //   $('.container').hide();
-  // }
+  function reset() {
+    $('.container').hide();
+  }
 
 
   bookView.initIndexPage = function() {
-    // reset();
+    reset();
     $('.book-view').show();
     app.Book.all.map(book => $('#book-template').append(book.toHtml()));
   }
 
   bookView.initAddForm = function() {
-    // reset();
+    reset();
     $('.book-form').show();
     $('#new-form').on('submit', function(e) {
       e.preventDefault();
