@@ -18,10 +18,10 @@ var app = app || {};
     window.location = '../';
   }
 
-  addView.initIndexPage = function() {
-    $('.container').hide();
-    $('.book-form').show();
-  }
+  // addView.initIndexPage = function() {
+  //   $('.container').hide();
+  //   $('.book-form').show();
+  // }
 
   module.addView = addView;
 
