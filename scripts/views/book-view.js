@@ -16,6 +16,7 @@ var app = app || {};
     app.Book.all.map(book => $('#book-template').append(book.toHtml()));
   }
 
+  // This function is triggered when a form is submitted to add a new book. It creates a new Book object with the values from the form, and passes that object to the createBook method in books.js.
   bookView.initAddForm = function() {
     reset();
     $('.book-form').show();
@@ -31,7 +32,7 @@ var app = app || {};
       })
       console.log('book', book);
       module.Book.createBook(book);
-      window.location = '../';
+      // window.location = './';
     })
   }
 
