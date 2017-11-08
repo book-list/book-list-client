@@ -2,6 +2,6 @@
 
 page('/', app.bookView.initIndexPage);
 page('/detail', app.detailView.initIndexPage);
-page('/new', app.bookView.initNewPage);
+page('/add', app.bookView.initAddForm);
 
 page();
