@@ -24,13 +24,13 @@ var __API_URL__ = 'https://kc-ng-booklist.herokuapp.com/';
   }
 
   Book.fetchAll = callback =>
-    $.get(`${__API_URL__}api/v1/books`)
+    $.get(`${__API_URL__}books`)
       .then(Book.loadAll)
       .then(callback)
       .catch(errorCallback);
 
   Book.prototype.insertBook = function(callback) {
-    $.post('/api/v1/books', {author: this.author, title: this.title, isbn: this.isbn, image_url: this.image_url, description: this.description})
+    $.post('/books', {author: this.author, title: this.title, isbn: this.isbn, image_url: this.image_url, description: this.description})
       .then(console.log)
       .then(callback);
   };
